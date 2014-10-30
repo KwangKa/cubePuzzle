@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #-*- coding:utf-8 -*-
 '''
 Created on 2014-3-21
@@ -90,8 +91,8 @@ def img2Puzzle(img, cube_num, outimg):
     return puzzle, width, height, width*height/9
 
 if __name__ == "__main__":
-    path = raw_input("input image path:")
-    outimg = raw_input("output image name:")
-    num = raw_input("cube number:")
-    p, w, h, n = img2Puzzle(path, int(num), outimg)
+    inImg = r'arsenal.jpg'
+    outImg = r'pixel.jpg' 
+    num = 200
+    p, w, h, n = img2Puzzle(inImg, num, outImg)
     print "cube required: %d, %dx%d" % (n, w/3, h/3)
